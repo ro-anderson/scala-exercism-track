@@ -1,0 +1,38 @@
+COmpiler check correctens for you.
+
+Functios
+Data
+Patterns (way to desgin code)
+
+
+pattern in functional programming
+just look funtions, types, parameters
+
+
+Extracting to typeclasses
+
+trait Combinable[A] {
+    def combine(x: A, y: A): A
+}
+
+you can implament instances
+
+Combinable[Int]
+implicit val combineInts = 
+new Combinable[Int] {
+    def combine(x: Int, y: Int): Int =
+        x + y
+}
+
+or:
+
+
+implicit val combineInts = 
+new Combinable[String] {
+    def combine(x: String , y: String ): String =
+        x + y
+}
+
+
+
+
